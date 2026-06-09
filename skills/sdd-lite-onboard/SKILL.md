@@ -47,7 +47,7 @@ Read the project structure systematically:
    └── Coding patterns used
 ```
 
-### Step 2: Check for Existing SDD Lite Artifacts
+### Step 2: Check for Existing Artifacts
 
 ```
 Check if these exist:
@@ -56,6 +56,14 @@ Check if these exist:
 └── CHANGELOG.md
 
 If any exist, READ them — they contain prior decisions you should preserve.
+
+Also check for LEGACY SDD artifacts:
+├── openspec/           ← OLD 7-phase SDD workflow
+├── openspec/changes/   ← OLD change folders
+
+If openspec/ exists: DO NOT follow that workflow. DO NOT create new artifacts
+in openspec/. SDD Lite uses PROJECT_CONTEXT.md, docs/decisions.md, and
+CHANGELOG.md. Acknowledge the legacy artifacts exist but ignore their format.
 ```
 
 ### Step 3: Check Engram Memory
@@ -67,6 +75,8 @@ mem_search(query: "architecture", project: "{project}")
 ```
 
 Look for existing architectural notes, decisions, or patterns already saved.
+
+**IMPORTANT**: Engram may contain memories from the OLD SDD workflow (sdd/proposals, sdd/specs, etc.). These describe the old 7-phase ceremony. IGNORE them — SDD Lite uses a different, simpler workflow.
 
 ### Step 4: Infer Architectural Decisions
 

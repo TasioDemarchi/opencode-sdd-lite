@@ -17,6 +17,13 @@ ALL SDD Lite agents MUST read project context before starting work:
 
 If PROJECT_CONTEXT.md doesn't exist, proceed but note it. Suggest onboarding if needed.
 
+**IMPORTANT: Legacy SDD artifacts.** If the project has an `openspec/` directory with proposal.md, spec.md, design.md, or tasks.md — these are from the OLD 7-phase SDD workflow. IGNORE them. Do NOT create artifacts in `openspec/`. SDD Lite uses ONLY:
+- `plan.md` (project root)
+- `design.md` (project root, large changes only)
+- `docs/decisions.md` (ADRs)
+- `CHANGELOG.md` (project root)
+- `PROJECT_CONTEXT.md` (project root)
+
 ## B. Skill Loading
 
 1. Check if the orchestrator injected a `## Project Standards (auto-resolved)` block in your launch prompt. If yes, follow those rules.

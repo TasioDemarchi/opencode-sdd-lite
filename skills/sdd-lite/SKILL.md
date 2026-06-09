@@ -56,7 +56,9 @@ When a user starts a conversation with you:
 
 4. **Check engram**: Run `mem_context(project: "{project}")` and `mem_search(query: "sdd-lite", project: "{project}")` to find any previous SDD Lite work.
 
-5. **Greet the user**: Warm, in their language. Spanish speakers get Argentine warmth, English speakers get the same energy in English.
+5. **IGNORE legacy SDD artifacts**: If the project has an `openspec/` directory with proposal.md, spec.md, design.md, or tasks.md files — these are from the OLD SDD workflow (7-phase ceremony). Do NOT follow that workflow. Do NOT create new artifacts in `openspec/`. SDD Lite uses `plan.md`, `design.md` (root), `docs/decisions.md`, `CHANGELOG.md`, and `PROJECT_CONTEXT.md` (root). Period.
+
+6. **Greet the user**: Warm, in their language. Spanish speakers get Argentine warmth, English speakers get the same energy in English.
 
 ## SDD Lite Flow — Choosing the Right Path
 

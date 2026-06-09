@@ -1,0 +1,138 @@
+{
+  "sdd-lite": {
+    "description": "SDD Lite orchestrator \u2014 Argentine senior architect, collaborative, passionate. Coordinates SDD Lite workflow: Plan \u2192 Design \u2192 Build.",
+    "mode": "primary",
+    "model": "opencode-go/minimax-m3",
+    "prompt": "{file:./prompts/sdd-lite/sdd-lite.md}",
+    "tools": {
+      "bash": true,
+      "delegate": true,
+      "delegation_list": true,
+      "delegation_read": true,
+      "edit": true,
+      "fetch": true,
+      "glob": true,
+      "grep": true,
+      "mcp": true,
+      "read": true,
+      "skill": true,
+      "task": true,
+      "todoread": true,
+      "todowrite": true,
+      "webfetch": true,
+      "websearch": true,
+      "write": true
+    },
+    "permission": {
+      "bash": "allow",
+      "delegate": "allow",
+      "delegation_list": "allow",
+      "delegation_read": "allow",
+      "edit": "allow",
+      "fetch": "allow",
+      "glob": "allow",
+      "grep": "allow",
+      "mcp": "allow",
+      "read": "allow",
+      "skill": "allow",
+      "todoread": "allow",
+      "todowrite": "allow",
+      "webfetch": "allow",
+      "websearch": "allow",
+      "task": {
+        "*": "deny",
+        "sdd-lite-apply": "allow",
+        "sdd-lite-design": "allow",
+        "sdd-lite-onboard": "allow"
+      }
+    },
+    "options": {}
+  },
+  "sdd-lite-apply": {
+    "description": "SDD Lite implementation agent. Receives plan.md and optionally design.md, implements code following Least Touch principle.",
+    "hidden": true,
+    "mode": "subagent",
+    "model": "deepseek/deepseek-v4-pro",
+    "prompt": "{file:./prompts/sdd-lite/sdd-lite-apply.md}",
+    "tools": {
+      "bash": true,
+      "edit": true,
+      "fetch": true,
+      "glob": true,
+      "grep": true,
+      "mcp": true,
+      "read": true,
+      "skill": true,
+      "write": true
+    },
+    "options": {},
+    "permission": {
+      "bash": "allow",
+      "edit": "allow",
+      "fetch": "allow",
+      "glob": "allow",
+      "grep": "allow",
+      "mcp": "allow",
+      "read": "allow",
+      "skill": "allow"
+    }
+  },
+  "sdd-lite-design": {
+    "description": "SDD Lite design agent. Creates design.md for large/architectural changes based on plan.md.",
+    "hidden": true,
+    "mode": "subagent",
+    "model": "opencode-go/minimax-m3",
+    "prompt": "{file:./prompts/sdd-lite/sdd-lite-design.md}",
+    "tools": {
+      "bash": true,
+      "edit": true,
+      "fetch": true,
+      "glob": true,
+      "grep": true,
+      "mcp": true,
+      "read": true,
+      "skill": true,
+      "write": true
+    },
+    "options": {},
+    "permission": {
+      "bash": "allow",
+      "edit": "allow",
+      "fetch": "allow",
+      "glob": "allow",
+      "grep": "allow",
+      "mcp": "allow",
+      "read": "allow",
+      "skill": "allow"
+    }
+  },
+  "sdd-lite-onboard": {
+    "description": "SDD Lite onboarding agent. Performs archaeology on existing projects \u2014 reads code, infers decisions, generates PROJECT_CONTEXT.md and retroactive ADRs.",
+    "hidden": true,
+    "mode": "subagent",
+    "model": "deepseek/deepseek-v4-flash",
+    "prompt": "{file:./prompts/sdd-lite/sdd-lite-onboard.md}",
+    "tools": {
+      "bash": true,
+      "edit": true,
+      "fetch": true,
+      "glob": true,
+      "grep": true,
+      "mcp": true,
+      "read": true,
+      "skill": true,
+      "write": true
+    },
+    "options": {},
+    "permission": {
+      "bash": "allow",
+      "edit": "allow",
+      "fetch": "allow",
+      "glob": "allow",
+      "grep": "allow",
+      "mcp": "allow",
+      "read": "allow",
+      "skill": "allow"
+    }
+  }
+}

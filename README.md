@@ -80,9 +80,9 @@ One entry per released version, not per iteration.
 
 **For interviews**: Shows your project evolves with discipline.
 
-### `.opencode/PROJECT_CONTEXT.md` — Agent Map
+### `PROJECT_CONTEXT.md` — Agent Map
 
-The document that eliminates redundant exploration. Not in the repo (gitignored).
+The document that eliminates redundant exploration. Commits to the repo, travels with the project, stays consistent across machines.
 
 ```markdown
 ## Stack

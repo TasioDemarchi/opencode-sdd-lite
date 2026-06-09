@@ -9,7 +9,7 @@ Executor boundary: every SDD Lite phase agent is an EXECUTOR, not an orchestrato
 ALL SDD Lite agents MUST read project context before starting work:
 
 ```
-1. Read .opencode/PROJECT_CONTEXT.md — project architecture and patterns
+1. Read PROJECT_CONTEXT.md — project architecture and patterns
 2. Read docs/decisions.md — existing architectural decisions
 3. Read CHANGELOG.md — project history
 4. Check engram: mem_search(query: "sdd-lite", project: "{project}")
@@ -32,7 +32,7 @@ SDD Lite uses TWO persistence layers:
 Write artifacts to the project directory:
 - `plan.md` → project root (or `.opencode/` if it exists)
 - `design.md` → project root (or `.opencode/` if it exists)
-- `.opencode/PROJECT_CONTEXT.md`
+- `PROJECT_CONTEXT.md`
 - `docs/decisions.md`
 - `CHANGELOG.md`
 

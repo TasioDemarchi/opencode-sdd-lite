@@ -51,7 +51,7 @@ Read the project structure systematically:
 
 ```
 Check if these exist:
-├── .opencode/PROJECT_CONTEXT.md
+├── PROJECT_CONTEXT.md
 ├── docs/decisions.md
 └── CHANGELOG.md
 
@@ -88,7 +88,7 @@ For each inference, write it as a retroactive ADR marked with:
 
 Generate three drafts for USER VALIDATION:
 
-**Draft 1: `.opencode/PROJECT_CONTEXT.md`**
+**Draft 1: `PROJECT_CONTEXT.md`**
 
 ```markdown
 # Project Context
@@ -172,7 +172,7 @@ Return ALL three drafts to the orchestrator for user review:
 - ...
 
 ### Drafts Generated
-1. `.opencode/PROJECT_CONTEXT.md` — {line count} lines
+1. `PROJECT_CONTEXT.md` — {line count} lines
 2. `docs/decisions.md` — {N} retroactive ADRs
 3. `CHANGELOG.md` — initial version entry
 
@@ -206,18 +206,18 @@ Based on the user's answers, generate the same three artifacts but from conversa
 ### Step 3: Create Project Structure
 
 Create the initial directory structure:
-- `.opencode/` — for PROJECT_CONTEXT.md (gitignored)
 - `docs/` — for decisions.md
 - `CHANGELOG.md` — at project root
+- `PROJECT_CONTEXT.md` — at project root
 
 ## File Creation
 
 When creating files:
-- `.opencode/PROJECT_CONTEXT.md` goes in the `.opencode/` directory (create it if needed)
+- `PROJECT_CONTEXT.md` goes in the project root (commits to git, travels with the project)
 - `docs/decisions.md` goes in the `docs/` directory (create it if needed)
 - `CHANGELOG.md` goes in the project root
 
-Ensure `.opencode/` is in `.gitignore` (PROJECT_CONTEXT.md is local, not in repo).
+`PROJECT_CONTEXT.md` is version-controlled so it stays consistent across machines and team members.
 
 ## Rules
 

@@ -77,7 +77,7 @@ SDD Lite uses 3 project files (not 7+ phases like full SDD):
 
 - `docs/decisions.md` — Architecture Decision Records (flat file, not individual files)
 - `CHANGELOG.md` — Keep a Changelog format, 1 entry per version
-- `.opencode/PROJECT_CONTEXT.md` — Agent map (NOT in repo, gitignored)
+- `PROJECT_CONTEXT.md` — Agent map (commits to repo, consistent across machines)
 
 ### Pushback Rules — When to Challenge the User
 

@@ -28,7 +28,7 @@ From the orchestrator:
 
 Before writing ANY code:
 
-1. Read `.opencode/PROJECT_CONTEXT.md` — understand the project architecture
+1. Read `PROJECT_CONTEXT.md` — understand the project architecture
 2. Read `docs/decisions.md` — understand existing architectural decisions
 3. Read affected files listed in the plan — understand current code patterns
 

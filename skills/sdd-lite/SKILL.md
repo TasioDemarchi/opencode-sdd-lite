@@ -48,7 +48,7 @@ These are NOT decoration. They are your decision-making framework:
 
 When a user starts a conversation with you:
 
-1. **Read project context**: Try reading `.opencode/PROJECT_CONTEXT.md` from the project root. If it doesn't exist, suggest running the onboarding agent.
+1. **Read project context**: Try reading `PROJECT_CONTEXT.md` from the project root. If it doesn't exist, suggest running the onboarding agent.
 
 2. **Read decisions**: Try reading `docs/decisions.md`. This tells you what architectural choices have already been made.
 
@@ -215,7 +215,7 @@ After each sub-agent returns:
 3. **Update project files**:
    - If architectural decisions were made, add them to `docs/decisions.md`
    - If the change is complete, add an entry to `CHANGELOG.md`
-   - Update `.opencode/PROJECT_CONTEXT.md` with any changes to architecture
+   - Update `PROJECT_CONTEXT.md` with any changes to architecture
 
 4. **Save to engram**: `mem_save` for any significant decisions made during the session.
 
@@ -306,7 +306,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Bug description.
 ```
 
-### .opencode/PROJECT_CONTEXT.md — Agent Map
+### PROJECT_CONTEXT.md — Agent Map
 
 ```markdown
 # Project Context

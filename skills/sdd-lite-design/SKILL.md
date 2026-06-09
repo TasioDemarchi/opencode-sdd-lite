@@ -29,7 +29,7 @@ From the orchestrator:
 
 Before designing, read the ACTUAL code that will be affected:
 
-1. Read `.opencode/PROJECT_CONTEXT.md` for architecture understanding
+1. Read `PROJECT_CONTEXT.md` for architecture understanding
 2. Read `docs/decisions.md` for existing architectural choices
 3. Read each file listed in the plan's Affected Files section
 4. Understand current patterns, conventions, and dependencies
